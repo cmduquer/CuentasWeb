@@ -32,7 +32,7 @@ public class AccountFacade extends AbstractFacade<Account> implements AccountFac
 
     @Override
     public boolean checkLogin(String u, String p) {
-        Query q = em.createNamedQuery("select a from account a where a.username=:u and a.password=:p");
+        Query q = em.createNamedQuery("select a from Account a where a.username=:u and a.password=:p");
         q.setParameter("u", u);
         q.setParameter("p", p);
         return q.getResultList().size()>0;
