@@ -50,6 +50,12 @@ public class FileStorage implements Serializable {
 
     public FileStorage() {
     }
+    
+    public FileStorage( String fileName, byte[] content )
+    {
+        this.fileName = fileName;
+        this.content = content;
+    }
 
     public FileStorage(Long fsPk) {
         this.fsPk = fsPk;

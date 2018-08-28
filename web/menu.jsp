@@ -8,10 +8,13 @@
 <c:if test="${empty login}">
     <a href="login.jsp">login</a>
     <a href="newAccount.jsp">Register</a>
+    <a href="fileuploadpage.jsp">FileUpload</a>
 </c:if>
 <c:if test="${not empty login}">
     <a href="AccountServlet?action=logout">Logout</a>
     <a href="AccountServlet?action=list">List Accounts</a>
+    <a href="FileServlet?action=list">List Files</a>
+    <a href="fileuploadpage.jsp">FileUpload</a>
 </c:if>
 <a href="about.jsp">about</a>
 <hr/>
