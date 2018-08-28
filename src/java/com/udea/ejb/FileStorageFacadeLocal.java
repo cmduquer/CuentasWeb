@@ -5,7 +5,7 @@
  */
 package com.udea.ejb;
 
-import com.udea.entity.Account;
+import com.udea.entity.FileStorage;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -14,27 +14,20 @@ import javax.ejb.Local;
  * @author cmduquer
  */
 @Local
-public interface AccountFacadeLocal {
+public interface FileStorageFacadeLocal {
 
-    void create(Account account);
+    void create(FileStorage fileStorage);
 
-    void edit(Account account);
+    void edit(FileStorage fileStorage);
 
-    void remove(Account account);
+    void remove(FileStorage fileStorage);
 
-    Account find(Object id);
+    FileStorage find(Object id);
 
-    List<Account> findAll();
+    List<FileStorage> findAll();
 
-    List<Account> findRange(int[] range);
+    List<FileStorage> findRange(int[] range);
 
     int count();
-
-    boolean checkLogin(String u, String p);
-
-  
-  
-
-
     
 }
